@@ -1,2 +1,6 @@
-# algorithms
-Python implementation of various algorithms, primarily based on Stanford's Algorithms Specialization course
+# Algorithms
+
+## Sorting
+
+- [Selection sort](sorting/selection-sort.py)
+- [Merge sort](sorting/merge-sort.py)
