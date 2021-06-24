@@ -5,6 +5,7 @@
 - Hash table
 - [Stack](data/stack.py)
 - [Queue](data/queue.py)
+- [Binary search tree](data/bst.py)
 - Tree
 - Heap
 - Trie
