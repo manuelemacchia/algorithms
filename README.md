@@ -1,25 +1,22 @@
 # Algorithms and data structures
 
 ## Data structures
-
 - Linked list
 - Hash table
-- Stack
-- Queue
-- Heap
+- [Stack](data/stack.py)
+- [Queue](data/queue.py)
 - Tree
-- Graph
+- Heap
 - Trie
+- Graph
 
 ## Sorting
-
 - Insert sort
 - [Selection sort](sorting/selection-sort.py)
 - [Merge sort](sorting/merge-sort.py)
 - Quick sort
 
 ## Search
-
 - Binary search
 - Breadth-first search
 - Depth-first search
