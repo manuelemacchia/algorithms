@@ -47,16 +47,34 @@ class BinarySearchTree:
                 
         return node  # node is None or key found
     
-    def minimum(self):
-        pass
+    def minimum(self, node):
+        """Find the node whose key is minimum in a tree.
+        
+        Look for the minimum key inside the tree whose root is node.
+        Return a pointer to a node with the minimum key if it exists.
+        We assume at least 1 element exists in the tree.
+        
+        Time complexity: O(h)
+        """
+        
+        while node.left:
+            node = node.left
+        
+        return node
+        
     
-    def maximum(self):
+    def maximum(self, node):
+        """Find the node whose key is maximum in a tree."""
+        
+        while node.right:
+            node = node.right
+            
+        return node
+    
+    def successor(self):
         pass
     
     def predecessor(self):
-        pass
-    
-    def successor(self):
         pass
     
     def insert(self):
