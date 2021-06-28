@@ -10,23 +10,42 @@ class BinarySearchTree:
     def __init__(self):
         pass
     
-    def search(self, node, k):
+    def recursive_search(self, node, k):
         """Search for a node with a given key within a tree.
+        
+        Recursive algorithm.
         
         Look for key k inside the tree whose root is node.
         Return a pointer to a node with key k if one exists, otherwise None.
-        Recursive algorithm.
         
-        Time complexity: O(h), with h the height of the tree.
+        Time complexity: O(h), with h the height of the tree. The nodes
+        encountered during the recursion form a simple path downward from the
+        root of the tree.
         """
         
-        if not node or node.key == k:  # None node or key found
+        if not node or node.key == k:  # node is None or key found
             return node
         
         if k <= node.key:
-            return self.search(node.left, k)
+            return self.recursive_search(node.left, k)
         else:  # k > node.key
-            return self.search(node.right, k)
+            return self.recursive_search(node.right, k)
+        
+    def iterative_search(self, node, k):
+        """Search for a node with a given key within a tree.
+        
+        Iterative algorithm.
+        
+        Time complexity: O(h)
+        """
+        
+        while node and node.key != k:  # node is not None and key not found
+            if k <= node.key:
+                node = node.left
+            else:  # k > node.key
+                node = node.right
+                
+        return node  # node is None or key found
     
     def minimum(self):
         pass
