@@ -12,7 +12,7 @@
 - Graph
 
 ## Sorting
-- Insert sort
+- [Insertion sort](sorting/insertion-sort.py)
 - [Selection sort](sorting/selection-sort.py)
 - [Merge sort](sorting/merge-sort.py)
 - Quick sort
