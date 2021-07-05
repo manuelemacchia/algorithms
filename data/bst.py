@@ -61,8 +61,7 @@ class BinarySearchTree:
             node = node.left
         
         return node
-        
-    
+
     def maximum(self, node):
         """Find the node whose key is maximum in a tree."""
         
@@ -71,9 +70,46 @@ class BinarySearchTree:
             
         return node
     
-    def successor(self):
-        pass
-    
+    def successor(self, node):
+        """Find the inorder successor of node in a tree.
+        
+        If all keys are distinct, the inorder successor of x is defined as the
+        node with the smallest key greater than x.key.
+        
+        Note that no comparison is needed to find the inorder successor.
+        
+        Return the successor of node in the BST if it exists, otherwise return
+        None (node has the highest key inside the tree).
+        
+        Time complexity: O(h). We only traverse the tree by going always up
+        or always down.
+        """
+        
+        # If node has a right child, find the node with the smallest key inside
+        # the right subtree.
+        if node.right:
+            node = node.right
+            while node.left:
+                node = node.left
+                
+            return node
+        
+        # When node.right is None, the inorder successor of node is the lowest
+        # ancestor of node whose left child is also an ancestor of node.
+        
+        # If node does not have a right child, we traverse the tree upwards.
+        # - If the current node is its parent's right child, keep traversing
+        #   upwards (the parent is smaller than the initial node).
+        # - If the node is its parent's left child, return the node (the parent
+        #   is the smallest node greater than the initial node).
+        else:
+            parent = node.parent
+            while parent and node == parent.right:  # short-circuit evaluation
+                node = node.parent
+                parent = node.parent
+
+            return parent
+        
     def predecessor(self):
         pass
     
