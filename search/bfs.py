@@ -77,7 +77,8 @@ def breadth_first_search(g: Graph, s):
     explored = set(s)
     
     # Initialize a queue where gray nodes are stored, i.e., nodes that may
-    # have yet-to-discover neighbors.
+    # have yet-to-discover neighbors (nodes that have not yet had their
+    # adjacency lists fully examined).
     queue = Queue(len(g.adjacency))
     queue.enqueue(s)
     
