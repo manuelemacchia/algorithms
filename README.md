@@ -19,5 +19,5 @@
 
 ## Search
 - Binary search
-- Breadth-first search
+- [Breadth-first search](search/bfs.py)
 - Depth-first search
